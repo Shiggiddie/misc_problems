@@ -10,10 +10,10 @@ def rabbit_compare(r1, r2):
     r2t = rabbit_total(r2)
     print('Comparing "%s" (%d) to "%s" (%d)' % (r1, r1t, r2, r2t))
     if (r1t == r2t):
-        print('...the total was the same, lexigraphically: %r' % (r1 > r2,))
+        print('...the total was the same, lexigraphically: %r' % (r2 > r1,))
         return 1 if r2 > r1 else -1
     else:
-        print('...the total was different, yeilding: %d' % (r1t - r2t,))
+        print('...the total was different, yeilding: %d' % (r2t - r1t,))
         return r2t - r1t
 
 def sort_rabbits(rabbits):
